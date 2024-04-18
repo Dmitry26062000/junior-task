@@ -1,0 +1,46 @@
+{%  extends 'procedure/main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{FIO}}</title>
+</head>
+<body>
+{% block content %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Счет</th>
+      <th scope="col">Фамилия</th>
+         <th scope="col">Имя</th>
+      <th scope="col">Отчество</th>
+      <th scope="col">Дата рождения</th>
+        <th scope="col">ИНН</th>
+      <th scope="col">ФИО ответственного</th>
+      <th scope="col">Статус</th>
+        <th scope="col">Изменить статус</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in clients %}
+    <tr>
+      <td >{{ i.score }}</td>
+      <td>{{ i.surname }}</td>
+        <td>{{ i.name }}</td>
+      <td>{{ i.Otchestvo }}</td>
+    <td>{{ i.DateofBirth }}</td>
+     <td>{{ i.INN }}</td>
+     <td>{{ i.FIO }}</td>
+    <td>{{i.status}}</td>
+        <form action="{% url 'update' %}">
+            <input type="hidden" name="stid" value="{{ i.pk }}">
+            <td><input type="submit" value="Редактировать"></td>
+        </form>
+    </tr>
+      </form>
+  {%  endfor %}
+  </tbody>
+</table>
+{% endblock %}
+</body>
+</html>

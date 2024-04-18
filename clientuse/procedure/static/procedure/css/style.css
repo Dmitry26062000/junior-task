@@ -1,0 +1,24 @@
+input[type='password'],input[type='email']{
+	width: 100%;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+input[type='password']:focus,input[type='email']:focus{
+	border: 1px solid #5db6db;
+	box-shadow: 0 0 10px #b9eaff;
+	outline: none !important;
+}
+input[type='submit']{
+	background: rgb(39,160,210);
+	color: #fff;
+	border: none;
+	padding: 50px 20px;
+	cursor: pointer;
+}
+.main-login-form{
+	 display:flex;
+  justify-content: center;
+}
